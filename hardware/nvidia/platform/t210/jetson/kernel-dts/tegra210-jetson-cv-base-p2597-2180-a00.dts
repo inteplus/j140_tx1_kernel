@@ -723,8 +723,7 @@
 				 nvidia,function = "hsic";
 			};
 			pcie {
-				 nvidia,lanes =	"uphy-lane-1", "uphy-lane-2",
-						"uphy-lane-3", "uphy-lane-4";
+				 nvidia,lanes =	"uphy-lane-4";
 				 nvidia,function = "pcie";
 				 nvidia,pcie-controller = <0>;
 				 nvidia,pcie-lane-select =
@@ -736,7 +735,24 @@
 				nvidia,pcie-controller = <1>;
 				nvidia,pcie-lane-select =
 					<TEGRA_PADCTL_PCIE_LANE_X1>;
+				status = "disabled";
 			};
+
+			usb2-m2 {
+				 nvidia,lanes = "otg-3";
+				 nvidia,function = "xusb";
+				 nvidia,port-cap =
+					<TEGRA_PADCTL_PORT_HOST_ONLY>;
+			};
+			usb3-m2 {
+				 nvidia,lanes = "uphy-lane-0";
+				 nvidia,function = "usb3";
+				 nvidia,usb3-port = <2>;
+				 nvidia,usb2-map = <3>;
+				 nvidia,port-cap =
+					<TEGRA_PADCTL_PORT_HOST_ONLY>;
+			};
+
 			sata {
 				 nvidia,lanes = "uphy-lane-7";
 				 nvidia,function = "sata";
@@ -761,8 +777,10 @@
 			<&tegra_padctl_uphy TEGRA_PADCTL_UPHY_USB3_P(1)>,
 			<&tegra_padctl_uphy TEGRA_PADCTL_UPHY_UTMI_P(1)>,
 			<&tegra_padctl_uphy TEGRA_PADCTL_UPHY_USB3_P(0)>,
-			<&tegra_padctl_uphy TEGRA_PADCTL_UPHY_UTMI_P(0)>;
-		phy-names = "utmi-2", "usb3-1", "utmi-1", "usb3-0", "utmi-0";
+			<&tegra_padctl_uphy TEGRA_PADCTL_UPHY_UTMI_P(0)>,
+			<&tegra_padctl_uphy TEGRA_PADCTL_UPHY_USB3_P(2)>,
+			<&tegra_padctl_uphy TEGRA_PADCTL_UPHY_UTMI_P(3)>;
+		phy-names = "utmi-2", "usb3-1", "utmi-1", "usb3-0", "utmi-0", "usb3-2", "utmi-3";
 #endif
 		nvidia,pmc-wakeup =
 			<&tegra_pmc
