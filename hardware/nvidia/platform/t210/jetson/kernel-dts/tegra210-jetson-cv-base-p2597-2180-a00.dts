@@ -820,6 +820,12 @@
 				0 0 0 0 0>;
 	};
 
+	regulators{
+		vdd_fan: regulator@13{
+			gpio=<&gpio TEGRA_GPIO(BB,3) 0>;
+		};
+	};
+
 	pwm-fan {
 		compatible = "pwm-fan";
 		pwms = <&tegra_pwm 3 45334>;
@@ -829,6 +835,7 @@
 
 	pwm_fan_shared_data: pfsd {
 		tach_gpio =  <&gpio TEGRA_GPIO(K, 7) GPIO_ACTIVE_LOW>; /* TEGRA_GPIO_PK7 */
+		pwm_gpio =  <&gpio TEGRA_GPIO(E, 7) GPIO_ACTIVE_LOW>; /* TEGRA_GPIO_PE7 */
 	};
 
 	hdr40_i2c0: i2c@7000c400 {
