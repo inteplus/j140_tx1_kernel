@@ -1,0 +1,9 @@
+[submodule "kernel/kernel-4.9"]
+    path = kernel/kernel-4.9
+    url = git://nv-tegra.nvidia.com/linux-4.9.git
+[submodule "kernel/nvidia"]
+    path = kernel/nvidia
+    url = git://nv-tegra.nvidia.com/linux-nvidia.git
+[submodule "kernel/nvgpu"]
+    path = kernel/nvgpu
+    url = git://nv-tegra.nvidia.com/linux-nvgpu.git
