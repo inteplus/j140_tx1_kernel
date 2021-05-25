@@ -662,15 +662,17 @@
 			usb2-2 {
 				status = "okay";
 				mode = "host";
+				vbus-supply = "<&battery_reg>;
+				nvidia,oc-pin = <1>;
 			};
-			usb3-0 {
+			/*usb3-0 {
 				status = "okay";
 				nvidia,usb2-companion = <1>;
 			};
 			usb3-1 {
 				status = "okay";
 				nvidia,usb2-companion = <2>;
-			};
+			};*/
 			hsic-0 {
 				status = "okay";
 			};
