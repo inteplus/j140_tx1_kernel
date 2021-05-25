@@ -662,7 +662,7 @@
 			usb2-2 {
 				status = "okay";
 				mode = "host";
-				vbus-supply = "<&battery_reg>;
+				vbus-supply = "<&battery_reg>";
 				nvidia,oc-pin = <1>;
 			};
 			/*usb3-0 {

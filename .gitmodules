@@ -1,3 +1,6 @@
+[submodule "kernel/kernel-4.4"]
+    path = kernel/kernel-4.4
+    url = git://nv-tegra.nvidia.com/linux-4.4.git
 [submodule "kernel/kernel-4.9"]
     path = kernel/kernel-4.9
     url = git://nv-tegra.nvidia.com/linux-4.9.git
